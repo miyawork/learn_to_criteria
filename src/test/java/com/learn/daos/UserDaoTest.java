@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.StreamSupport;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,6 +23,12 @@ public class UserDaoTest {
 	private UserDao userDao;
 	@Autowired
 	private UserDaoCustom userDaoCustom;
+	
+	@BeforeEach
+	public void initialize() {
+		// レコード初期化
+		userDao.deleteAll();
+	}
 
 	/**
 	 * 基幹設定に問題あったらここも落ちる
@@ -52,8 +59,11 @@ public class UserDaoTest {
 
 		userDao.saveAll(saveDataList);
 		
-		List<User> resultData = userDaoCustom.findLikeName("not");
-		assertEquals(resultData.size(), 1, "登録後に取得");
+		List<User> resultDataFirst = StreamSupport.stream(userDao.findAll().spliterator(), false).toList();
+		assertEquals(resultDataFirst.size(), 4, "無条件に取得");
+		
+		List<User> resultDataSecond = userDaoCustom.findLikeName("not");
+		assertEquals(resultDataSecond.size(), 1, "登録後に取得");
 		
 	}
 }
