@@ -9,6 +9,9 @@ import com.learn.daos.UserDao;
 import com.learn.daos.UserDaoCustom;
 import com.learn.models.User;
 
+/**
+ * UserDaoCustom‚ÌÀ‘•BUserDao‚Æ‚Í–¼Ì(UserDao + Impl)‚ÅŒ‹‚Ñ‚Â‚¢‚Ä‚¢‚éB
+ */
 public class UserDaoImpl extends commonCustomImpl<User> implements UserDaoCustom{
 
 

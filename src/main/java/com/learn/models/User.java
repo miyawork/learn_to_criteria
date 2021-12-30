@@ -7,6 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+
+/**
+ * ユーザモデルクラス。コレ自体がデータベースの型となる。modelsフォルダになければならない。
+ */
 @Entity
 @Table(name = "users")
 public class User {
@@ -38,6 +42,11 @@ public class User {
 		this.id = id;
 	}
 
+	/**
+	 * 新規作成時はこのコンストラクタにて詰める
+	 * @param email
+	 * @param name
+	 */
 	public User(String email, String name) {
 		this.setEmail(email);
 		this.setName(name);
