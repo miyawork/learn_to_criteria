@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class ApplicationTest {
 
 	/**
-	 * ŠîŠ²•”•ª‚Åƒ~ƒX‚Á‚Ä‚½‚ç‚±‚±‚ª—‚¿‚é
+	 * åŸºå¹¹è¨­å®šã«å•é¡Œã‚ã£ãŸã‚‰ã“ã“ã‚‚è½ã¡ã‚‹
 	 */
     @Test
     public void whenSpplicationStartTest_thenNoExceptions() {

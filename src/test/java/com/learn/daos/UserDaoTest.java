@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.learn.models.User;
 
 /**
- * userDao‚ÌƒeƒXƒg
+ * userDaoï¿½Ìƒeï¿½Xï¿½g
  */
 @SpringBootTest
 public class UserDaoTest {
@@ -24,7 +24,7 @@ public class UserDaoTest {
 	private UserDaoCustom userDaoCustom;
 
 	/**
-	 * ŠîŠ²İ’è‚Åƒ~ƒX‚Á‚Ä‚½‚ç‚±‚±‚ª—‚¿‚éB
+	 * åŸºå¹¹è¨­å®šã«å•é¡Œã‚ã£ãŸã‚‰ã“ã“ã‚‚è½ã¡ã‚‹
 	 */
 	@Test
 	public void whenDBTest_thenNoExceptions() {
@@ -34,13 +34,13 @@ public class UserDaoTest {
 	public void whenSaveAndGetUserTest_thenCorrect() {
 
 		List<User> resultDataFirst = StreamSupport.stream(userDao.findAll().spliterator(), false).toList();
-		assertEquals(resultDataFirst.size(), 0, "“o˜^‘O‚Éæ“¾");
+		assertEquals(resultDataFirst.size(), 0, "ç™»éŒ²å‰ã«å–å¾—");
 
 		User saveData = new User("email.com", "john");
 		userDao.save(saveData);
 		List<User> resultDataSecond = StreamSupport.stream(userDao.findAll().spliterator(), false).toList();
 
-		assertEquals(resultDataSecond.size(), 1, "“o˜^Œã‚Éæ“¾");
+		assertEquals(resultDataSecond.size(), 1, "ç™»éŒ²å¾Œã«å–å¾—");
 	}
 
 	@Test
@@ -53,7 +53,7 @@ public class UserDaoTest {
 		userDao.saveAll(saveDataList);
 		
 		List<User> resultData = userDaoCustom.findLikeName("not");
-		assertEquals(resultData.size(), 1, "“o˜^Œã‚Éæ“¾");
+		assertEquals(resultData.size(), 1, "ç™»éŒ²å¾Œã«å–å¾—");
 		
 	}
 }

@@ -6,8 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.learn.models.User;
 
 /**
- * ƒ†[ƒU‚ÌDAOBdaos‚É’u‚©‚ê‚Ä‚È‚¯‚ê‚Î‚È‚ç‚È‚¢B
- * findById‚âsave‚È‚ÇŠî–{“I‚È‘€ì‚ÍCrudRepository‚É‹l‚Ü‚Á‚Ä‚¢‚éB
+ * ãƒ¦ãƒ¼ã‚¶DAOã€‚Springä¸Šã§ã¯daosãƒ•ã‚©ãƒ«ãƒ€å†…ã«ã‚ã‚‹ã“ã¨ã§çµã³ã¤ã„ã¦ã„ã‚‹ã€‚
+ * findByIdã‚„saveãªã©åŸºæœ¬å‡¦ç†ã¯CrudRepositoryå´ã®ãƒ¡ã‚½ãƒƒãƒ‰ã§è¡Œã£ã¦ãã‚Œã‚‹ã€‚
  */
 @Transactional
 public interface UserDao extends CrudRepository<User, Long> {

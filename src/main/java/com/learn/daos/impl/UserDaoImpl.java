@@ -10,13 +10,13 @@ import com.learn.daos.UserDaoCustom;
 import com.learn.models.User;
 
 /**
- * UserDaoCustom‚ÌÀ‘•BUserDao‚Æ‚Í–¼Ì(UserDao + Impl)‚ÅŒ‹‚Ñ‚Â‚¢‚Ä‚¢‚éB
+ * UserDaoCustomã®å®Ÿè£…ã€‚UserDaoã¨ã¯åç§°(UserDao + Impl)ã§çµã³ã¤ã„ã¦ã„ã‚‹ã€‚
  */
-public class UserDaoImpl extends commonCustomImpl<User> implements UserDaoCustom{
+public class UserDaoImpl extends CommonCustomImpl<User> implements UserDaoCustom{
 
 
 	/**
-	 * Œ³‚ÌDAOBLazy‚É‚æ‚é’x‰„‰Šú‰»‚ğs‚Á‚Ä‚¢‚é
+	 *  è¿½åŠ ã™ã‚‹å…ˆã®DAOã€‚@Lazyã«ã‚ˆã£ã¦é…å»¶åˆæœŸåŒ–ã•ã‚Œã¦ã„ã‚‹ãã†ã€‚
 	 * https://mkyong.com/spring-data/spring-data-add-custom-method-to-repository/
 	 */
     @Autowired
