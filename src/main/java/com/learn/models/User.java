@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 
 
 /**
- * ƒ†[ƒUƒ‚ƒfƒ‹ƒNƒ‰ƒXBƒRƒŒ©‘Ì‚ªƒf[ƒ^ƒx[ƒX‚ÌŒ^‚Æ‚È‚éBmodelsƒtƒHƒ‹ƒ_‚É‚È‚¯‚ê‚Î‚È‚ç‚È‚¢B
+ * ãƒ¦ãƒ¼ã‚¶ãƒ¢ãƒ‡ãƒ«ã€‚Springã¨ã¯modelsãƒ•ã‚©ãƒ«ãƒ€å†…ã«ã‚ã‚‹ã“ã¨ã§çµã³ã¤ã„ã¦ã„ã‚‹ã€‚
  */
 @Entity
 @Table(name = "users")
@@ -43,7 +43,7 @@ public class User {
 	}
 
 	/**
-	 * V‹Kì¬‚Í‚±‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É‚Ä‹l‚ß‚é
+	 * æ–°è¦ä½œæˆæ™‚ã¯ã“ã“ã§è©°ã‚ãŸã‚Šã™ã‚‹
 	 * @param email
 	 * @param name
 	 */

@@ -10,7 +10,7 @@ import com.learn.models.User;
 @Transactional
 public interface UserDaoCustom{
 	/**
-	 * User.name‚Ì•”•ªˆê’vŒŸõ
+	 * User.nameã®éƒ¨åˆ†ä¸€è‡´ã€‚
 	 * @param name
 	 * @return
 	 */

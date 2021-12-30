@@ -9,11 +9,11 @@ import javax.persistence.criteria.Root;
 import org.springframework.core.GenericTypeResolver;
 
 /**
- * ‹¤’Ê‚ÌƒJƒXƒ^ƒ€DAO—pƒNƒ‰ƒXB
+ * å…±é€šDAOã€‚initializeãŒé¢å€’ã ã£ãŸã®ã§å…±é€šåŒ–ã—ãŸã€‚
  *
- * @param <T> entity–¼B
+ * @param <T> entity
  */
-public class commonCustomImpl<T> {
+public class CommonCustomImpl<T> {
 
 
 	@PersistenceContext
@@ -26,12 +26,12 @@ public class commonCustomImpl<T> {
     Class<T> domainClass;
     
     /**
-     * initializeB
+     * initialize
      */
     @SuppressWarnings("unchecked")
 	public void initializeCriteria () {
     	domainClass = (Class<T>) GenericTypeResolver
-                .resolveTypeArgument(getClass(), commonCustomImpl.class);
+                .resolveTypeArgument(getClass(), CommonCustomImpl.class);
 
     	builder = em.getCriteriaBuilder();
     	criteriaQuery = builder.createQuery(domainClass);
