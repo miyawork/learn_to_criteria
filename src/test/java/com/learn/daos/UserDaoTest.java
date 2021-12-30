@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.learn.models.User;
 
 /**
- * userDao�̃e�X�g
+ * userDaoのテスト
  */
 @SpringBootTest
 public class UserDaoTest {
