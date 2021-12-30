@@ -29,11 +29,20 @@ public class UserDaoImpl extends CommonCustomImpl<User> implements UserDaoCustom
      */
 	@Override
 	public List<User> findLikeName(String name) {
+		// 初期化
 	    initializeCriteria();
-	    criteriaQuery
-	      .select(root)
-	      .where(builder.like(root.get("name"), "%" + name + "%"));
 	    
+	    // queryを編集していくことで
+	    criteriaQuery
+	    // select。この場合は全件選択
+	      .select(root)
+	      // nameの部分一致
+	      .where(builder.like(
+	    		  root.get("name"), "%" + name + "%"))
+	      // 順序なども実装可能。
+	      .orderBy(builder.asc(root.get("name")));
+	    
+	    // 結果を返す
 	    TypedQuery<User> query = em.createQuery(criteriaQuery);
 	    return query.getResultList();
 	}
