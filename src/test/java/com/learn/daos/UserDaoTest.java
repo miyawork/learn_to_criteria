@@ -1,6 +1,7 @@
 package com.learn.daos;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.Arrays;
 import java.util.List;
@@ -65,5 +66,17 @@ public class UserDaoTest {
 		List<User> resultDataSecond = userDaoCustom.findLikeName("not");
 		assertEquals(resultDataSecond.size(), 1, "登録後に取得");
 		
+	}
+	@Test
+	public void whenSetNullValueToNotNullColumn_thenFail() {
+
+		// 名前がnotnull
+		User saveData = new User("email.com", null);
+		try {
+			userDao.save(saveData);
+			fail("not nullなのに 通過してしまった");
+		}catch (Exception e) {
+			System.out.print(e);
+		}
 	}
 }
